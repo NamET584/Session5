@@ -2164,3 +2164,10 @@ To a signal can be added to signal mask:
 int sigprocmask(int how, const sigset_t *set, sigset_t *oldset);
 ```
 We can use sigprocmask() to change the process signal mask, to retrieve the existing mask, or both.
+
+__Pending Signal__: To determine which signals are pending for a pro-
+cess, we can call sigpending().
+```c
+#include <signal.h>
+int sigpending(sigset_t *set);
+```
